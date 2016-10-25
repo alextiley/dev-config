@@ -40,15 +40,15 @@ alias ..='cd ../'   # Go back 1 directory level
 alias finder='open -a Finder ./'    # f: Opens current directory in MacOS Finder
 alias ~="cd ~"  # ~: Go Home
 alias which='type -all' # which: Find executables
-trash () { command mv "$@" ~/.Trash ; } # trash: Moves a file to the MacOS trash
+trash () { command mv "$@" ~/.Trash; } # trash: Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql: Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT: Pipe content to file on MacOS Desktop
-zipf () { zip -r "$1".zip "$1" ; }          # zipf: create a ZIP archive of a folder
+zipf () { zip -r "$1".zip "$1"; }          # zipf: create a ZIP archive of a folder
 alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete" # Recursively delete .DS_Store files
 alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'  # show hidden files in Finder
 alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE' # hide hidden files in Finder
 alias updatedb='sudo /usr/libexec/locate.updatedb'
-alias port='lsof -n -i4TCP:$PORT | grep LISTEN'
+port () { lsof -i :"$1" | grep LISTEN; }
 
 # cd's to frontmost window of mac os x finder
 cdf () {
