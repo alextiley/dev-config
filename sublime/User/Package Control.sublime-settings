@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ApacheConf.tmLanguage",
+		"BracketHighlighter",
+		"Cucumber",
+		"Emmet",
+		"JavaScriptNext - ES6 Syntax",
+		"JSX",
+		"LESS",
+		"Package Control",
+		"SCSS",
+		"Theme - Spacegray"
+	]
+}
