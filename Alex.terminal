@@ -179,7 +179,7 @@
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
 	<key>CursorType</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>DisableANSIColor</key>
 	<false/>
 	<key>Font</key>
@@ -198,7 +198,7 @@
 	<key>FontWidthSpacing</key>
 	<real>0.99596774193548387</real>
 	<key>ProfileCurrentVersion</key>
-	<real>2.04</real>
+	<real>2.0499999999999998</real>
 	<key>RunCommandAsShell</key>
 	<true/>
 	<key>SelectionColor</key>
@@ -211,7 +211,7 @@
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
 	<key>ShouldRestoreContent</key>
-	<true/>
+	<false/>
 	<key>ShowActiveProcessArgumentsInTabTitle</key>
 	<true/>
 	<key>ShowActiveProcessArgumentsInTitle</key>
@@ -269,7 +269,7 @@
 	<key>columnCount</key>
 	<integer>260</integer>
 	<key>name</key>
-	<string>Pro</string>
+	<string>Alex</string>
 	<key>rowCount</key>
 	<integer>62</integer>
 	<key>shellExitAction</key>

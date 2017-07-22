@@ -1,15 +1,8 @@
-export NODE_ENV='development'
+# Load the current project's specific aliases
+source ~/.bash_profile_current_project
 
 # Auto cd into Development folder
-cd ~/Development > /dev/null
-
-# NPM Specific configuration
-NPM_PACKAGES="${HOME}/.npm-packages"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+cd ~/Development/ > /dev/null
 
 # git specific environment vars
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -17,14 +10,11 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # Ensure these paths are prepended to the $PATH var
 export PATH="${HOME}/.bin:/usr/local/bin:/usr/bin:$PATH"
 
-# Add MySQL to the PATH variable
-export PATH="/usr/local/mysql/bin:$PATH"
-
 # Change Prompt
 parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u@localhost: \w\[\033[1;33m\]\$(parse_git_branch)\[\033[0m\] -> \[$(tput sgr0)\]"
+export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]atiley@localhost: \w\[\033[1;33m\]\$(parse_git_branch)\[\033[0m\] -> \[$(tput sgr0)\]"
 
 # Add color to terminal (from http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/)
 export CLICOLOR=1
@@ -48,6 +38,9 @@ alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete" # Recursively de
 alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'  # show hidden files in Finder
 alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE' # hide hidden files in Finder
 alias updatedb='sudo /usr/libexec/locate.updatedb'
+alias composer='~/bin/composer.phar'
+npm_versions() { npm show "$1" versions --json; }
+bower_versions() { bower info "$1"; }
 port () { lsof -i :"$1" | grep LISTEN; }
 
 # cd's to frontmost window of mac os x finder

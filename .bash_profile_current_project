@@ -1,0 +1,2 @@
+# VM aliase
+ng () { ssh vagrant@192.168.33.20; }
